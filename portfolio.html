@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanidhya Gupta</title>
+    <link rel="shortcut icon" type="image/jpg" href="portfolio_fav.jpg" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Merriweather+Sans:wght@800&family=Montserrat&family=Noto+Sans+JP&family=Oleo+Script+Swash+Caps&family=Raleway:wght@300;400&family=Roboto+Condensed:wght@700&family=Water+Brush&display=swap');
+    </style>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+    <nav id="nav">
+        <div id="navbar">
+            <li class="nav_link" id="active">Home</li>
+
+            <li class="nav_link"> <a href="portfolio_projects.html">Projects</a> </li>
+            <li class="nav_link">Contact</li>
+        </div>
+    </nav>
+    <div id="intro">
+        <div id="content">
+
+            <div id="addressal">
+                Hello I'm <section id="name">Sanidhya Gupta</section>
+            </div>
+
+            <div id="lines">
+
+                <div id="lines1">I'm a B.Tech undergrad and a learning Programmer and Developer with a serious passion
+                    for</div>
+                <div id="lines2"> animations and creating intuitive user experiences</div>
+            </div>
+
+            <button id="nav_button">Check out my work -></button>
+        </div>
+    </div>
+    <div id="about">
+        <div id="skills">
+            <h1 id="skill_head">My skills</h1>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70">
+
+
+
+
+                    <p style="width:50%" data-value="50">C++ 50%</p>
+                    <progress max="100" value="50" class="html5">
+
+                        <div class="progress-bar">
+                            <span style="width: 50%">50%</span>
+                        </div>
+                    </progress>
+
+                    <p style="width:80%" data-value="80">HTML5 80%</p>
+                    <progress max="100" value="80" class="html5">
+
+                        <div class="progress-bar">
+                            <span style="width: 80%">80%</span>
+                        </div>
+                    </progress>
+
+
+                    <p style="width:60%" data-value="60">CSS3 60%</p>
+                    <progress max="100" value="60" class="css3">
+                        <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+                        <div class="progress-bar">
+                            <span style="width: 60%">60%</span>
+                        </div>
+                    </progress>
+
+
+                    <p style="width:50%" data-value="50">JavaScript 50%</p>
+                    <progress max="100" value="50" class="jquery">
+                        <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+                        <div class="progress-bar">
+                            <span style="width: 50%">50%</span>
+                        </div>
+                    </progress>
+
+                    </li>
+                </div>
+
+            </div>
+            <div id="more_info">
+                <h1 id="detail"> More Info About Me</h1>
+                <p class="detail_info">I'm an undergraduate in B-Tech Material Science
+                </p>
+                <p class="detail_info">and Engineering from NIT, Hamirpur with current grade point of 8.5.</p>
+                <p class="detail_info">Currently I'm working on Front end Web Development but also want to explore my
+                    potential in Cyber Security.</p>
+                <p class="detail_info"> I am also a member of Team .EXE,Team CSEC and Team E-Cell</p>
+                <p class="detail_info"> for the Technical Fest NIMBUS 2022 NITH.</p>
+
+
+
+            </div>
+
+        </div>
+
+        <div id="footer">
+            <ul id="logos">
+                <li class="footlink"><a href="https://www.linkedin.com/in/sanidhya-gupta-042957120/"><img
+                            src="linkdin.jpg" alt="linkdin" class="footimg" title="Linkedin"> </a></li>
+                <li class="footlink"><a href=""><img src="insta.jpg" alt="instagram" class="footimg"
+                            title="Instagram"></a></li>
+                <li class="footlink"><a href="https://github.com/sanidhya99"><img src="github.jpg" alt="git"
+                            class="footimg" title="Git Hub"></a></li>
+                <li class="footlink"><a href="mailto:sanidhya738@gmail.com"><img src="mail.jpg" alt="mail"
+                            class="footimg" title="Mail"></a></li>
+            </ul>
+            <div id="copyright">
+
+                <center> &nbsp;<br><br><br><br><br> All &copy; reserved to Sanidhya Gupta</center>
+            </div>
+
+        </div>
+        <div id="greet_box">Hello!This is my intro website here you can have<br> all information about me,<br> get to
+            know about my projects, <br> as well as contact <me class="br"></me> Have a nice day!</div>
+        <div id="welcome">WELCOME!</div>
+        <script>
+
+            let greet_box = document.getElementById('greet_box');
+            function request() {
+                greet_box.style.display = 'block';
+            }
+            function request_del() {
+                greet_box.style.display = 'none';
+            }
+
+            setTimeout(request, 10000);
+            setTimeout(request_del, 20000);
+
+            let welcome = document.getElementById('welcome');
+
+            function welcome_del() {
+                welcome.style.display = 'none';
+            }
+
+
+            setTimeout(welcome_del, 5000);
+
+        </script>
+</body>
+
+</html>
