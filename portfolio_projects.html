@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio_projects.css">
-    <title>Document</title>
+    <title>Projects</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Merriweather+Sans:wght@800&family=Montserrat&family=Noto+Sans+JP&family=Oleo+Script+Swash+Caps&family=Raleway:wght@300;400&family=Roboto+Condensed:wght@700&family=Water+Brush&display=swap');
         </style>
@@ -14,13 +14,13 @@
 
 <body>
     <nav id="nav">
-        <div id="navbar">
-            <li class="nav_link"><a href="portfolio.html">Home</a> </li>
+        <div id="navbar"  onmouseover="block()" onmouseout="none()">
+            <li class="nav_link" id="home" onclick="no_welcome()" ><a href="portfolio.html">Home</a></li>
 
-            <li class="nav_link"> <a href="portfolio_projects.html" id="active">Projects</a> </li>
-            <li class="nav_link">Contact</li>
+            <li class="nav_link" id="project" > <a href="portfolio_projects.html" >Projects</a> </li>
+            <li class="nav_link" id="contact" >  <a href="portfolio_contact.html">Contact</a> </li>
         </div>
-    </nav>
+    </nav> 
     <center>
         <h2 id="head_pro">PROJECTS</h2>
     </center>
@@ -37,7 +37,7 @@
     <div id="footer">
         <ul id="logos">
             <li class="footlink"><a href="https://www.linkedin.com/in/sanidhya-gupta-042957120/"><img src="linkdin.jpg" alt="linkdin" class="footimg" title="Linkedin"> </a></li>
-            <li class="footlink"><a href=""><img src="insta.jpg" alt="instagram" class="footimg"  title="Instagram"></a></li>
+            <li class="footlink"><a href="https://www.instagram.com/sanidhya.9/"><img src="inst1.jpg" alt="instagram" class="footimg"  title="Instagram"></a></li>
             <li class="footlink"><a href="https://github.com/sanidhya99"><img src="github.jpg" alt="git" class="footimg" title="Git Hub" ></a></li>
             <li class="footlink"><a href="mailto:sanidhya738@gmail.com"><img src="mail.jpg" alt="mail" class="footimg"  title="Mail"></a></li>
         </ul>
@@ -47,6 +47,49 @@
         </div>
         
     </div>
+    <script>
+
+        let greet_box = document.getElementById('greet_box');
+        function request() {
+            greet_box.style.display = 'block';
+        }
+        function request_del() {
+            greet_box.style.display = 'none';
+        }
+
+        setTimeout(request, 10000);
+        setTimeout(request_del, 20000);
+
+        let welcome = document.getElementById('welcome');
+
+        function welcome_del() {
+            welcome.style.display = 'none';
+        }
+   setTimeout(none(),1000);
+     function block(){
+    document.getElementById('home').style.display='block';
+    document.getElementById('project').style.display='block';
+    document.getElementById('contact').style.display='block';
+    document.getElementById('navbar').style.justifyContent='space-evenly';
+     }
+     function none(){
+    // document.getElementById('home').style.display='none';
+
+    document.getElementById('home').style.display='none';
+    document.getElementById('navbar').style.justifyContent='center';
+    document.getElementById('contact').style.display='none';
+     }
+     function nowelcome(){
+        document.getElementById('welcome').style.display='none';
+     }
+     function no_welcome(){
+        setTimeout(nowelcome,1000);
+     }
+  
+    //  setTimeout(no_welcome,1000);
+        setTimeout(welcome_del, 5000);
+
+    </script>
 </body>
 
 </html>
