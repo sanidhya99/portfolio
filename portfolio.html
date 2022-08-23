@@ -11,17 +11,19 @@
         @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Merriweather+Sans:wght@800&family=Montserrat&family=Noto+Sans+JP&family=Oleo+Script+Swash+Caps&family=Raleway:wght@300;400&family=Roboto+Condensed:wght@700&family=Water+Brush&display=swap');
     </style>
     <link rel="stylesheet" href="portfolio.css">
+   
 </head>
 
 <body>
-    <nav id="nav">
-        <div id="navbar">
-            <li class="nav_link" id="active">Home</li>
+     <nav id="nav">
+        <div id="navbar"  onmouseover="block()" onmouseout="none()">
+            <li class="nav_link" id="home" onclick="no_welcome()" ><a href="portfolio.html">Home</a></li>
 
-            <li class="nav_link"> <a href="portfolio_projects.html">Projects</a> </li>
-            <li class="nav_link">Contact</li>
+            <li class="nav_link" id="project" > <a href="portfolio_projects.html" >Projects</a> </li>
+            <li class="nav_link" id="contact" >  <a href="portfolio_contact.html">Contact</a> </li>
         </div>
-    </nav>
+    </nav> 
+    
     <div id="intro">
         <div id="content">
 
@@ -36,7 +38,7 @@
                 <div id="lines2"> animations and creating intuitive user experiences</div>
             </div>
 
-            <button id="nav_button">Check out my work -></button>
+            <button id="nav_button" onclick="slide_down()"> <a href="#about" id="button">About Me -></a> </button>
         </div>
     </div>
     <div id="about">
@@ -73,6 +75,14 @@
                         </div>
                     </progress>
 
+                    <p style="width:60%" data-value="60">Bootstrap 50%</p>
+                    <progress max="100" value="60" class="css3">
+                        <!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+                        <div class="progress-bar">
+                            <span style="width: 60%">50%</span>
+                        </div>
+                    </progress>
+
 
                     <p style="width:50%" data-value="50">JavaScript 50%</p>
                     <progress max="100" value="50" class="jquery">
@@ -86,7 +96,7 @@
                 </div>
 
             </div>
-            <div id="more_info">
+            <div id="more_info" >
                 <h1 id="detail"> More Info About Me</h1>
                 <p class="detail_info">I'm an undergraduate in B-Tech Material Science
                 </p>
@@ -101,16 +111,18 @@
             </div>
 
         </div>
-
+        
+        <!-- <button id="scroll" onclick="scroll()">scroll up</button> -->
         <div id="footer">
+            <div id="scroll"><a href="#intro"><img src="upsc1.jpg" alt="" id="scrollimg"></a></div>
             <ul id="logos">
-                <li class="footlink"><a href="https://www.linkedin.com/in/sanidhya-gupta-042957120/"><img
+                <li class="footlink"><a href="https://www.linkedin.com/in/sanidhya-gupta-042957120/" class="logolink"><img
                             src="linkdin.jpg" alt="linkdin" class="footimg" title="Linkedin"> </a></li>
-                <li class="footlink"><a href=""><img src="insta.jpg" alt="instagram" class="footimg"
+                <li class="footlink"><a href="https://www.instagram.com/sanidhya.9/" class="logolink"><img src="inst1.jpg" id="insta"alt="instagram" class="footimg"
                             title="Instagram"></a></li>
-                <li class="footlink"><a href="https://github.com/sanidhya99"><img src="github.jpg" alt="git"
+                <li class="footlink"><a href="https://github.com/sanidhya99" class="logolink"><img src="github.jpg" id="git" alt="git"
                             class="footimg" title="Git Hub"></a></li>
-                <li class="footlink"><a href="mailto:sanidhya738@gmail.com"><img src="mail.jpg" alt="mail"
+                <li class="footlink"><a href="mailto:sanidhya738@gmail.com" class="logolink"><img src="mail.jpg" alt="mail"
                             class="footimg" title="Mail"></a></li>
             </ul>
             <div id="copyright">
@@ -119,9 +131,22 @@
             </div>
 
         </div>
-        <div id="greet_box">Hello!This is my intro website here you can have<br> all information about me,<br> get to
-            know about my projects, <br> as well as contact <me class="br"></me> Have a nice day!</div>
-        <div id="welcome">WELCOME!</div>
+        <!-- <div id="greet_box">Hello!This is my intro website here you can have<br> all information about me,<br> get to -->
+            <!-- know about my projects, <br> as well as contact <me class="br"></me> Have a nice day!</div> -->
+            <!-- <button onclick="scroll()" ><a href="#intro">top</a></button> -->
+        <div id="welcome">
+            <!-- <span class="item">W</span>
+            <span class="item">E</span>
+            <span class="item">L</span>
+            <span class="item">C</span>
+            <span class="item">O</span>
+            <span class="item">M</span>
+            <span class="item">E</span>
+            <span class="item">!</span> -->
+            WELCOME!
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
         <script>
 
             let greet_box = document.getElementById('greet_box');
@@ -140,8 +165,28 @@
             function welcome_del() {
                 welcome.style.display = 'none';
             }
+       setTimeout(none(),1000);
+         function block(){
+        document.getElementById('home').style.display='block';
+        document.getElementById('project').style.display='block';
+        document.getElementById('contact').style.display='block';
+        document.getElementById('navbar').style.justifyContent='space-evenly';
+         }
+         function none(){
+        // document.getElementById('home').style.display='none';
 
-
+        document.getElementById('project').style.display='none';
+        document.getElementById('navbar').style.justifyContent='center';
+        document.getElementById('contact').style.display='none';
+         }
+         function nowelcome(){
+            document.getElementById('welcome').style.display='none';
+         }
+         function no_welcome(){
+            setTimeout(nowelcome,1000);
+         }
+      
+        //  setTimeout(no_welcome,1000);
             setTimeout(welcome_del, 5000);
 
         </script>
